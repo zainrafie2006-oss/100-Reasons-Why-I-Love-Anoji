@@ -1,72 +1,3 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-<meta charset="UTF-8">
-<title>Our Love Story 💜</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    background: linear-gradient(135deg, #5e2b97, #9b59b6);
-    color: white;
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-}
-
-input, button {
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-}
-
-button {
-    background: #ffffff;
-    color: #5e2b97;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.gallery img {
-    width: 250px;
-    border-radius: 15px;
-    margin: 10px;
-}
-
-h1, h2 {
-    font-weight: 300;
-}
-
-.story {
-    background: rgba(255,255,255,0.15);
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 20px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- 🔐 Password Screen -->
-<div id="login" class="container">
-    <h1>💜 موقعنا الخاص</h1>
-    <p>أدخل كلمة السر / Enter the password</p>
-    <input type="password" id="password" placeholder="كلمة السر">
-    <br>
-    <button onclick="checkPassword()">دخول</button>
-</div>
-
 <!-- 💖 Main Content -->
 <div id="content" class="hidden container">
 
@@ -101,10 +32,28 @@ h1, h2 {
         </p>
     </div>
 
-</div>
+    <!-- 💜 100 Reasons -->
+    <div class="story">
+        <h2>💜 100 Reasons Why I Love You</h2>
 
+        <ol style="text-align:left; max-width:700px; margin:auto;">
+            <li>لأن ابتسامتك تجعل يومي أجمل 💜</li>
+            <li>لأنك تفهمينني حتى بدون كلام</li>
+            <li>Because you make me feel safe</li>
+            <li>Because your laugh is my favorite sound</li>
+            <!-- أضف الأسباب هنا -->
+        </ol>
+
+        <p style="margin-top:15px; font-style:italic;">
+            (سنكملها معًا سببًا سببًا 🌹)
+        </p>
+    </div>
+
+</div> <!-- نهاية #content -->
+
+<!-- 🔐 كود الجافاسكريبت -->
 <script>
-const correctPassword = "i love you anoji"; // ← غيّر كلمة السر هنا
+const correctPassword = "i love you anoji"; // ← كلمة السر
 
 function checkPassword() {
     const input = document.getElementById("password").value;
@@ -117,5 +66,3 @@ function checkPassword() {
 }
 </script>
 
-</body>
-</html>
