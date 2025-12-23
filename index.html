@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Our Love Story 💜</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #5e2b97, #9b59b6);
+    color: white;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background: #ffffff;
+    color: #5e2b97;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.gallery img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+.story {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔐 Password Screen -->
+<div id="login" class="container">
+    <h1>💜 موقعنا الخاص</h1>
+    <p>أدخل كلمة السر / Enter the password</p>
+    <input type="password" id="password" placeholder="كلمة السر">
+    <br>
+    <button onclick="checkPassword()">دخول</button>
+</div>
+
+<!-- 💖 Main Content -->
+<div id="content" class="hidden container">
+
+    <h1>Our Love Story 💜</h1>
+    <p>قصتنا… بلغتين، بقلب واحد</p>
+
+    <!-- 📖 Story -->
+    <div class="story">
+        <h2>📖 قصتنا</h2>
+        <p>
+            هنا اكتب قصتكما بالعربية…<br><br>
+            Here you can write your love story in English…
+        </p>
+    </div>
+
+    <!-- 🖼️ Gallery -->
+    <div class="story">
+        <h2>🖼️ صورنا</h2>
+        <div class="gallery">
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+        </div>
+    </div>
+
+    <!-- 💌 Messages -->
+    <div class="story">
+        <h2>💌 رسائل</h2>
+        <p>
+            رسالة حب… تاريخ مهم… وعد 💜<br>
+            A love message, a promise, a memory.
+        </p>
+    </div>
+
+</div>
+
+<script>
+const correctPassword = "i love you anoji"; // ← غيّر كلمة السر هنا
+
+function checkPassword() {
+    const input = document.getElementById("password").value;
+    if (input === correctPassword) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").classList.remove("hidden");
+    } else {
+        alert("كلمة السر غير صحيحة");
+    }
+}
+</script>
+
+</body>
+</html>
