@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Our Love Story 💜</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #5e2b97, #9b59b6);
+    color: white;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background: #ffffff;
+    color: #5e2b97;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.gallery img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+.story {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
 <!-- 🔐 Password Screen -->
 <div id="login" class="container">
     <h1>💜 موقعنا الخاص</h1>
@@ -26,9 +84,9 @@
     <div class="story">
         <h2>🖼️ صورنا</h2>
         <div class="gallery">
-            <img src="images/1.jpg">
-            <img src="images/2.jpg">
-            <img src="images/3.jpg">
+            <img src="images/1.jpg" alt="صورة 1">
+            <img src="images/2.jpg" alt="صورة 2">
+            <img src="images/3.jpg" alt="صورة 3">
         </div>
     </div>
 
@@ -49,7 +107,7 @@
             <li>لأنك تفهمينني حتى بدون كلام</li>
             <li>Because you make me feel safe</li>
             <li>Because your laugh is my favorite sound</li>
-            <!-- أضف الأسباب هنا -->
+            <!-- أضف باقي الأسباب هنا -->
         </ol>
         <p style="margin-top:15px; font-style:italic;">
             (سنكملها معًا سببًا سببًا 🌹)
@@ -58,13 +116,13 @@
 
 </div> <!-- نهاية #content -->
 
-<!-- 🔐 كود الجافاسكريبت -->
+<!-- 🔐 جافاسكريبت لكلمة السر -->
 <script>
-const correctPassword = "i love you anoji"; // كلمة السر
+const correctPassword = "i love you anoji"; // ← ضع كلمة السر التي تريدها
 
 function checkPassword() {
     const input = document.getElementById("password").value;
-    if (input === correctPassword) {
+    if(input === correctPassword) {
         document.getElementById("login").style.display = "none";
         document.getElementById("content").classList.remove("hidden");
     } else {
@@ -72,3 +130,6 @@ function checkPassword() {
     }
 }
 </script>
+
+</body>
+</html>
